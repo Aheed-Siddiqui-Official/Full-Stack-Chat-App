@@ -43,7 +43,7 @@ app.use((req, res) => {
   res.status(404).json({ message: "Route not found" });
 });
 
-server.listen(PORT, () => {
+server.listen(process.env.PORT, () => {
   console.log("server is running on PORT:" + PORT);
   connectDB();
 });
